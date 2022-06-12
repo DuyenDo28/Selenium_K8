@@ -15,14 +15,14 @@ public class AnimalController {
         mapOfAnimalSpeed.put("Tiger",tiger.speed());
         mapOfAnimalSpeed.put("Dog",dog.speed());
         // print out the animal run with fastest speed
-        maxSpeed(mapOfAnimalSpeed);
+        AnimalRunWithMaxSpeed(mapOfAnimalSpeed);
 
     }
-    public static void maxSpeed(HashMap<String, Integer> animalSpeedList) {
+    public static void AnimalRunWithMaxSpeed(HashMap<String, Integer> animalSpeedList) {
         int maxSpd = (Collections.max(animalSpeedList.values()));
         for (Map.Entry<String, Integer> entry : animalSpeedList.entrySet()) {  // Iterate through HashMap
             if (entry.getValue() == maxSpd) {
-              //  System.out.println(entry.getKey());     // Print the key with max value
+              // Print the key with max value, Animal Name with fastest speed
                 System.out.printf("The animal name %s run with fastest speed is %d", entry.getKey(),maxSpd);
             }
         }
