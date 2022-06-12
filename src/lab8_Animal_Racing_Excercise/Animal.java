@@ -5,9 +5,9 @@ import java.security.SecureRandom;
 public class Animal {
     public int speeds;
     //int randomSpeed = new SecureRandom().nextInt(50);
-    public int speed(int randomSpeed){
+    public int speed(){
 
-        return randomSpeed;
+        return speeds;
     }
 
 }

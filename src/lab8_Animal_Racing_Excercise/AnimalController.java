@@ -1,40 +1,28 @@
 package lab8_Animal_Racing_Excercise;
 
 import java.security.SecureRandom;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 public class AnimalController {
     public static void main(String[] args) {
+        Animal horse = new Horse();
+        Animal tiger = new Tiger();
+        Animal dog = new Dog();
 
+        System.out.printf("Speed of horse is %d, tiger is %d, dog is %d \n", horse.speed(),tiger.speed(),dog.speed());
+        HashMap<String,Integer> mapOfAnimalSpeed =new HashMap<String,Integer>();
+        mapOfAnimalSpeed.put("Horse",horse.speed());
+        mapOfAnimalSpeed.put("Tiger",tiger.speed());
+        mapOfAnimalSpeed.put("Dog",dog.speed());
+        maxSpeed(mapOfAnimalSpeed);
 
-        int randomHorseSpeed = new SecureRandom().nextInt(75);
-        Horse horse = new Horse();
-        int horseSpeed = horse.speed(randomHorseSpeed);
-        System.out.printf("Horse speeds is %d \n", horseSpeed);
-        int randomTigerSpeed = new SecureRandom().nextInt(100);
-        Tiger tiger = new Tiger();
-        int tigerSpeed = tiger.speed(randomTigerSpeed);
-        System.out.printf("Tiger speeds is %d \n ", tigerSpeed);
-
-        int randomDogSpeed = new SecureRandom().nextInt(60);
-        Dog dog = new Dog();
-        int dogSpeed = dog.speed(randomDogSpeed);
-        System.out.printf("Dog speeds is %d \n ", dogSpeed);
-
-        if (horseSpeed >= tigerSpeed) {
-            if (horseSpeed >= dogSpeed) {
-                System.out.printf("Horse is winner with speeds %d w \n ", horseSpeed);
-            }
-        }
-        if (tigerSpeed >= horseSpeed) {
-            if (tigerSpeed >= dogSpeed) {
-                System.out.printf("Tiger is winner with speeds %d \n ", tigerSpeed);
-            }
-        }
-        if (dogSpeed >= horseSpeed) {
-            if (dogSpeed >= tigerSpeed) {
-                System.out.printf("Dog is winner with speeds %d \n", dogSpeed);
+    }
+    public static void maxSpeed(HashMap<String, Integer> animalSpeedList) {
+        int maxSpd = (Collections.max(animalSpeedList.values()));
+        for (Map.Entry<String, Integer> entry : animalSpeedList.entrySet()) {  // Iterate through HashMap
+            if (entry.getValue() == maxSpd) {
+              //  System.out.println(entry.getKey());     // Print the key with max value
+                System.out.printf("The animal name %s run with fastest speed is %d", entry.getKey(),maxSpd);
             }
         }
     }

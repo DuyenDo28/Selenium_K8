@@ -3,13 +3,9 @@ package lab8_Animal_Racing_Excercise;
 import java.security.SecureRandom;
 
 public class Horse extends Animal{
+    int randomHorseSpeed = new SecureRandom().nextInt(75);
     @Override
-    public int speed(int randomHorseSpeed) {
-        return super.speed(randomHorseSpeed);
-    }
-    public Horse() {
-    }
-
-    public Horse(String name, int speed) {
+    public int speed() {
+         return randomHorseSpeed;
     }
 }
