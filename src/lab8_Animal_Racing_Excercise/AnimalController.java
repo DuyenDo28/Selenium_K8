@@ -14,6 +14,7 @@ public class AnimalController {
         mapOfAnimalSpeed.put("Horse",horse.speed());
         mapOfAnimalSpeed.put("Tiger",tiger.speed());
         mapOfAnimalSpeed.put("Dog",dog.speed());
+        // print out the animal run with fastest speed
         maxSpeed(mapOfAnimalSpeed);
 
     }
