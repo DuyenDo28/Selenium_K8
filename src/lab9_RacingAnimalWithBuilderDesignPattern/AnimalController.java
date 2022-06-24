@@ -32,7 +32,7 @@ public class AnimalController {
         animalList.add(snake);
         animalList.add(falcon);
         // Print out all animals
-        System.out.println("all animals include: "+ animalList);
+        System.out.println("here is all animals : "+ animalList);
 
        // List<AnimalWithBuilder> nonWingAnimalList = new ArrayList<>();
         HashMap<String,Integer> nonWingAnimalList =new HashMap<String,Integer>();
@@ -45,6 +45,8 @@ public class AnimalController {
         }
         // Print out animals that have no wing
         System.out.println("The animals that have no wing include:  "+nonWingAnimalList);
+
+
         //Print out Animal run with fastest speed
         AnimalRunWithMaxSpeed(nonWingAnimalList);
 
