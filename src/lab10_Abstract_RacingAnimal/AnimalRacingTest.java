@@ -20,6 +20,6 @@ public class AnimalRacingTest {
         mapOfAnimalSpeed.put("Dog",dog.speed());
 
         // print out the all the animals run with fasest speed
-        animalRacingController.AnimalRunWithMaxSpeed(mapOfAnimalSpeed);
+        animalRacingController.animalRunWithMaxSpeed(mapOfAnimalSpeed);
     }
 }

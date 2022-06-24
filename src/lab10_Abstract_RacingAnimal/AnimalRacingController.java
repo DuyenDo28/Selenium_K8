@@ -8,7 +8,7 @@ public class AnimalRacingController {
 
 
     // Find out all animals racing with fastest speed
-    public static void AnimalRunWithMaxSpeed(HashMap<String, Integer> animalSpeedList) {
+    public static void animalRunWithMaxSpeed(HashMap<String, Integer> animalSpeedList) {
 
         int maxSpd = (Collections.max(animalSpeedList.values()));
 

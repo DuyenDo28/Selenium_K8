@@ -16,10 +16,10 @@ class AnimalController {
         mapOfAnimalSpeed.put("Tiger",tiger.speed());
         mapOfAnimalSpeed.put("Dog",dog.speed());
         // print out the all the animals run with fastest speed
-        AnimalRunWithMaxSpeed(mapOfAnimalSpeed);
+        animalRunWithMaxSpeed(mapOfAnimalSpeed);
 
     }
-    public static void AnimalRunWithMaxSpeed(HashMap<String, Integer> animalSpeedList) {
+    public static void animalRunWithMaxSpeed(HashMap<String, Integer> animalSpeedList) {
 
         int maxSpd = (Collections.max(animalSpeedList.values()));
 
