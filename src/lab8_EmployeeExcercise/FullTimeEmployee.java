@@ -1,5 +1,8 @@
 package lab8_EmployeeExcercise;
 
-public class FullTimeEmployee{
-
+class FullTimeEmployee extends Employee{
+    @Override
+    public float getSalary() {
+        return 50000;
+    }
 }
